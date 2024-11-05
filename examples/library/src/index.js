@@ -1,0 +1,25 @@
+import _ from 'lodash';
+import numRef from './ref.json';
+
+console.log('numRef', numRef);
+console.log('_', _);
+
+export function numToWord(num) {
+  return _.reduce(
+    numRef,
+    (accum, ref) => {
+      return ref.num === num ? ref.word : accum;
+    },
+    '',
+  );
+}
+
+export function wordToNum(word) {
+  return _.reduce(
+    numRef,
+    (accum, ref) => {
+      return ref.word === word && word.toLowerCase() ? ref.num : accum;
+    },
+    -1,
+  );
+}
