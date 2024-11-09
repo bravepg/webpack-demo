@@ -13,12 +13,13 @@ module.exports = {
     },
   },
   externals: {
-    lodash: {
-      commonjs: 'lodash',
-      commonjs2: 'lodash',
-      amd: 'lodash',
-      root: '_',
-    },
+    // lodash: {
+    //   commonjs: 'lodash',
+    //   commonjs2: 'lodash',
+    //   amd: 'lodash',
+    //   root: '_',
+    // },
+    lodash: '_',
   },
   devtool: 'source-map',
 };
